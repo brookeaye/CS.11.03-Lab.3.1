@@ -48,7 +48,7 @@ public class Main {
         System.out.println("Enter your name.");
         Scanner nameScanner = new Scanner(System.in);
         String name = nameScanner.nextLine();
-        System.out.println("Congratulations, " + name + "." + " You have once again allowed the patriarchy to crush you dreams. Better luck next time.");
+        System.out.println("Congratulations, " + name + "." + " You have once again allowed the patriarchy to crush your dreams. Better luck next time.");
     }
     public static void success(){
         System.out.println("Enter your name.");
