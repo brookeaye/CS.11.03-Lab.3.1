@@ -45,10 +45,16 @@ public class Main {
     }
 
     public static void sadFail(){
-        System.out.println("You have once again allowed the patriarchy to crush you dreams. Better luck next time.");
+        System.out.println("Enter your name.");
+        Scanner nameScanner = new Scanner(System.in);
+        String name = nameScanner.nextLine();
+        System.out.println("Congratulations, " + name + "." + " You have once again allowed the patriarchy to crush you dreams. Better luck next time.");
     }
     public static void success(){
-        System.out.println("Congrats, you have won. Your husband is dead and you have gained all of his money.");
+        System.out.println("Enter your name.");
+        Scanner nameScanner = new Scanner(System.in);
+        String name = nameScanner.nextLine();
+        System.out.println("Congrats, " + name + ", you have won. Your husband is dead and you have gained all of his money.");
     }
     public static void killBill() {
         System.out.println("Your husband is now dead. Do you call the police?");
@@ -121,7 +127,25 @@ public class Main {
 
     }
 
+    public static void mustDo(){
+        System.out.println("Before you play the game you have to do this so I can fulfill the lab requirements.");
+        System.out.println("Please enter your age.");
+        Scanner ageScanner = new Scanner(System.in);
+        int age = ageScanner.nextInt();
+        if (age<1){
+            System.out.println("Stop lying.\nWhatever start playing the game.\n");
+            return;
+        }
+        System.out.println("The singles digit of your age is " + age%10);
+        System.out.println("Your age times two is " + age*2);
+        System.out.println("One year ago you were " + (age-1) + " years old.");
+        if (age/2 < 5){
+            System.out.println("Warning: you probably are too young to play this game but I don't really care so do what you want.\n");
+        }
+    }
+
     public static void main(String[] args) {
+        mustDo();
         start();
         if (meetGuy() == 0){
             return;
